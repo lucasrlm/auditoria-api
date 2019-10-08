@@ -1,4 +1,4 @@
-﻿using AuditoriaApi.Dados;
+﻿using Auditoria.Dados.Entidades;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -7,11 +7,10 @@ namespace auditoria_api.Controllers
     /// <summary>
     /// Controller de auditoria de pedidos
     /// </summary>
-    [Route("api/[controller]")]
+    [Route("v1/[controller]")]
     [ApiController]
     public class PedidosController : ControllerBase
     {
-
         ILogger _logger;
         public PedidosController(ILogger<PedidosController> logger)
         {
@@ -23,7 +22,7 @@ namespace auditoria_api.Controllers
         /// </summary>
         /// <param name="pagamento"></param>
         /// <returns></returns>
-        [HttpPost("pagamento")]
+        [HttpPost("pagamentos")]
         public ActionResult RegistrarPagamento([FromBody]Pagamento pagamento)
         {
             string log = pagamento.RegistrarPagamento();

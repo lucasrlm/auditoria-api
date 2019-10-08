@@ -4,5 +4,17 @@
         <name>AuditoriaApi</name>
     </assembly>
     <members>
+        <member name="T:auditoria_api.Controllers.PedidosController">
+            <summary>
+            Controller de auditoria de pedidos
+            </summary>
+        </member>
+        <member name="M:auditoria_api.Controllers.PedidosController.RegistrarPagamento(Auditoria.Dados.Entidades.Pagamento)">
+            <summary>
+            Registra os dados de um pagamento que foi realizado
+            </summary>
+            <param name="pagamento"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>
